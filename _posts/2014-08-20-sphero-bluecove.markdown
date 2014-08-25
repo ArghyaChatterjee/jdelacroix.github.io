@@ -3,7 +3,7 @@ layout: post
 modal-id: 1
 title: sphero-bluecove
 date: 2014-07-18
-img: sphero.jpg
+img: sphero.png
 alt: image-alt
 project-date: August 2014
 client: Start Bootstrap

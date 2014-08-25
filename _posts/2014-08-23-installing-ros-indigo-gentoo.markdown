@@ -1,10 +1,7 @@
 ---
 layout: post
-modal-id: 1
 title: Installing ROS Indigo Igloo on Gentoo Linux
 date: 2014-08-23
-img: sphero.jpg
-alt: image-alt
 project-date: August 2014
 category: Tutorials
 description: Installation instructions for ROS Indigo Igloo on Gentoo Linux.
