@@ -6,6 +6,8 @@
 
 body {
     overflow-x: hidden;
+    /*background: #{{ site.color.secondary-light }};*/
+    background: #fff;
 }
 
 p {
@@ -44,35 +46,12 @@ hr.star-primary {
     border: 0;
     border-top: solid 5px;
     text-align: center;
-}
-
-hr.star-light:after,
-hr.star-primary:after {
-    content: "\f005";
-    display: inline-block;
-    position: relative;
-    top: -.8em;
-    padding: 0 .25em;
-    font-family: FontAwesome;
-    font-size: 2em;
-}
-
-hr.star-light {
-    border-color: #fff;
-}
-
-hr.star-light:after {
-    color: #fff;
-    background-color: #{{ site.color.primary }};
+    border-color: #{{ site.color.tertiary }};
 }
 
 hr.star-primary {
-    border-color: #{{ site.color.secondary }};
-}
-
-hr.star-primary:after {
-    color: #{{ site.color.secondary }};
-    background-color: #fff;
+    border-color: #{{ site.color.primary }};
+    box-shadow: 1px 1px #{{ site.color.secondary }};
 }
 
 .img-centered {
@@ -107,6 +86,12 @@ header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
 }
+
+header {
+    text-shadow: 1px 1px #{{ site.color.secondary }};
+}
+
+
 
 @media(min-width:768px) {
     header .container {
@@ -179,9 +164,26 @@ section h2 {
     font-size: 3em;
 }
 
-section.success {
-    color: #fff;
-    background: #{{ site.color.primary }};
+section.normal a {
+    color: #{{ site.color.secondary }};
+    font-weight: bold;
+}
+
+section.normal a:hover {
+    color: #{{ site.color.secondary }};
+}
+
+section.footer {
+    display: none;
+}
+
+section li {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.special {
+    background: transparent url({{ "img/bg-header.jpg" | prepend: site.baseurl }}) repeat fixed;
 }
 
 @media(max-width:767px) {
@@ -204,6 +206,7 @@ section.success {
     position: relative;
     margin: 0 auto;
     max-width: 400px;
+    box-shadow: 2px 2px #D2D2D3;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption {
@@ -211,7 +214,7 @@ section.success {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(24,188,156,.9);
+    background: rgba(46,187,229,.99);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
@@ -251,22 +254,75 @@ section.success {
     }
 }
 
-.btn-outline {
+.btn-outline, .btn-outline-footer {
     margin-top: 15px;
     border: solid 2px #fff;
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
     background: 0 0;
     transition: all .3s ease-in-out;
+    /* LAUREN DEMANDS */
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.btn-outline-footer {
+    border: solid 2px #fff;
 }
 
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
+    border: solid 2px #{{ site.color.secondary-light }};
+    background: #{{ site.color.secondary-light  }};
+    color: #{{ site.color.secondary-dark }};
+}
+
+section.normal a.btn-outline {
+    border: solid 2px #{{ site.color.secondary }};
+}
+
+section.normal a.btn-outline:hover,
+a.btn-outline:focus,
+a.btn-outline:active {
+    color: #{{ site.color.secondary-light }};
+    background: #{{ site.color.secondary }};
+}
+
+.btn-page {
+    border: solid 2px #{{ site.color.secondary }};
+    color: #{{ site.color.secondary }};
+
+    position: absolute;
+    top: -75px;
+    left: 20px;
+}
+
+.btn-page:hover {
+    border: solid 2px #{{ site.color.secondary }};
+    background: #{{ site.color.secondary }};
+    color: #{{ site.color.secondary-light }};
+}
+
+section.footer .btn-outline {
+    border: solid 2px #{{ site.color.secondary-dark }};
+    color: #{{ site.color.secondary-dark }};
+}
+
+section.footer .btn-outline:hover {
+    background: #{{ site.color.secondary-dark }};
+    color: #{{ site.color.secondary-light }};
+}
+
+.btn-outline-footer:hover,
+.btn-outline-footer:focus,
+.btn-outline-footer:active,
+.btn-outline-footer.active {
+    border: solid 2px #{{ site.color.secondary-light }};
     color: #{{ site.color.primary }};
-    background: #fff;
+    background: #{{ site.color.secondary-light  }};
 }
 
 .floating-label-form-group {
@@ -334,7 +390,7 @@ footer h3 {
 }
 
 footer .footer-above {
-    padding-top: 50px;
+    padding-top: 75px;
     background-color: #{{ site.color.secondary }};
 }
 
@@ -367,8 +423,8 @@ footer .footer-below {
 .scroll-top {
     z-index: 1049;
     position: fixed;
-    right: 2%;
-    bottom: 2%;
+    right: 20px;
+    bottom: 20px;
     width: 50px;
     height: 50px;
 }
@@ -376,13 +432,28 @@ footer .footer-below {
 .scroll-top .btn {
     width: 50px;
     height: 50px;
-    border-radius: 100%;
+    border-radius: 0;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 20px;
+    padding: 0;
+    padding-top: 20%;
 }
 
 .scroll-top .btn:focus {
     outline: 0;
+}
+
+
+.scroll-top .btn {
+    border: solid 2px #{{ site.color.secondary }};
+    background: #fff;
+    color: #{{ site.color.secondary }};
+}
+
+.scroll-top .btn:hover {
+    border: solid 2px #{{ site.color.secondary }};
+    background: #{{ site.color.secondary }};
+    color: #{{ site.color.secondary-light }};
 }
 
 .portfolio-modal .modal-content {
@@ -394,11 +465,21 @@ footer .footer-below {
     background-clip: border-box;
     -webkit-box-shadow: none;
     box-shadow: none;
+    background: #{{ site.color.secondary-light }};
 }
 
 .portfolio-modal .modal-content h2 {
     margin: 0;
     font-size: 3em;
+}
+
+.portfolio-modal .modal-content a {
+    font-weight: bold;
+    color: #{{ site.color.secondary }};
+}
+
+.portfolio-modal .modal-content a:hover {
+    color: #{{ site.color.tertiary }};
 }
 
 .portfolio-modal .modal-content img {
@@ -442,4 +523,41 @@ footer .footer-below {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+}
+
+/* Unique Coloring */
+
+.background-plain {
+  background: #fff;
+}
+
+.background-gradient {
+  background: linear-gradient(top, #f0f0f1, #fff);
+  background: -o-linear-gradient(top, #f0f0f1, #fff);
+  background: -webkit-linear-gradient(top, #f0f0f1, #fff);
+  background: -moz-linear-gradient(top, #f0f0f1, #fff);
+}
+
+/* Overriding code block styling from Bootstrap */
+pre {
+    display: block;
+    padding: 10px;
+    margin: 0 0 10.5px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #{{ site.color.secondary-light }};
+    background-color: #{{ site.color.secondary }};
+    border: 2px solid #{{ site.color.secondary }};
+    border-radius: 0px;
+}
+
+code {
+  background: #{{ site.color.secondary-light}};
+  color: #{{ site.color.secondary }};
+}
+
+.license p {
+  font-size: 14px;
 }
