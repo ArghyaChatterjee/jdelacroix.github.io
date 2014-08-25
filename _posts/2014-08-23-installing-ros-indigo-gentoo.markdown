@@ -85,6 +85,6 @@ Since the new [ROS](http://ros.org) release, [Indigo Igloo](http://wiki.ros.org/
 
 14. Use catkin to build and install Indigo and its packages.
 
-        $ ./src/catkin/bin/catkin_make_isolated --install --install-space ${ROS_INSTALL_PREFIX}/indigo -DCMAKE_BUILD_TYPE=Release -DSETUPTOOLS_ARG_EXTRA=ââ -DSETUPTOOLS_DEB_LAYOUT=OFF
+        $ ./src/catkin/bin/catkin_make_isolated --install --install-space ${ROS_INSTALL_PREFIX}/indigo -DCMAKE_BUILD_TYPE=Release -DSETUPTOOLS_ARG_EXTRA="" -DSETUPTOOLS_DEB_LAYOUT=OFF
 
 15. Now that Indigo is installed, proceed with the standard documentation to add your own ROS packages.

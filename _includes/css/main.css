@@ -6,7 +6,6 @@
 
 body {
     overflow-x: hidden;
-    /*background: #{{ site.color.secondary-light }};*/
     background: #fff;
 }
 
@@ -91,9 +90,7 @@ header {
     text-shadow: 1px 1px #{{ site.color.secondary }};
 }
 
-
-
-@media(min-width:768px) {
+@media(min-width:@screen-sm-min) { /* 786px */
     header .container {
         padding-top: 200px;
         padding-bottom: 100px;
@@ -108,7 +105,7 @@ header {
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:@screen-sm-min) {
     .navbar-fixed-top {
         padding: 25px 0;
         -webkit-transition: padding .3s;
