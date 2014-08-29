@@ -1,17 +1,15 @@
 ---
 layout: post
-modal-id: 1
 title: sphero-bluecove
 date: 2014-07-18
 img: sphero.png
 alt: image-alt
 project-date: August 2014
-client: Start Bootstrap
 type: project
 language: Java
-category: Projects
+category: Software
 description: A Java SDK for Orbotix's Sphero using BlueCove.
-repository: sphero-bluecove
+repository: jdelacroix/sphero-bluecove
 ---
 
 My GitHub page features a Java SDK for <a href="http://www.gosphero.com/" title="Orbotix's Sphero">Orbotix's Sphero</a>, a robotic ball. This package uses <a href="http://bluecove.org/" title="BlueCove">BlueCove</a> for connecting to the Sphero from a computer via Bluetooth. For example, this code snippet rotates the Sphero's RGB LED through a four color sequence (CMYK):

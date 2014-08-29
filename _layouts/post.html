@@ -10,30 +10,27 @@
     <section class="normal" id="post-top">
       <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <div class="modal-body">
-                    <h2>{{ page.title }}</h2>
-                    <hr class="star-light">
-                    <p><em>{{ page.description }}</em></p>
-                    <ul class="list-inline item-details">
-                        <li>Category:
-                            <strong>{{ page.category }}
-                            </strong>
-                        </li>
-                        <li>Date:
-                            <strong>{{ page.project-date }}
-                            </strong>
-                        </li>
-                        {% if page.repository != nil %}
-                        <li>
-                          Repository: <a href="https://github.com/jdelacroix/sphero-bluecove/{{ page.repository }}">{{ page.repository }}</a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                    <div style="text-align: left;">
-                        {{ content }}
-                    </div>
-                    <!--<button type="button" onclick="step_back()" class="btn btn-default btn-outline btn-page"><i class="fa fa-arrow-left"></i> Back</button>-->
+            <div class="col-xs-8 col-xs-offset-2 text-center">
+                <h2>{{ page.title }}</h2>
+                <hr class="star-light">
+                <p><em>{{ page.description }}</em></p>
+                <ul class="list-inline item-details">
+                    <li>Category:
+                        <strong>{{ page.category }}
+                        </strong>
+                    </li>
+                    <li>Date:
+                        <strong>{{ page.project-date }}
+                        </strong>
+                    </li>
+                    {% if page.repository != nil %}
+                    <li>
+                      Repository: <a href="https://github.com/{{ page.repository }}">{{ page.repository }}</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <div style="text-align: left;">
+                    {{ content }}
                 </div>
             </div>
         </div>
