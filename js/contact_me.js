@@ -26,7 +26,7 @@ $(function() {
                     text: message
                 },
                 cache: false,
-                username: pubkey-35c3a133f213518283f395f04abb9a6e,
+                username: "pubkey-35c3a133f213518283f395f04abb9a6e",
                 success: function() {
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
