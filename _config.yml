@@ -32,3 +32,6 @@ address:
 # Build settings
 markdown: kramdown
 permalink: none
+
+gems:
+  - jekyll-sitemap
