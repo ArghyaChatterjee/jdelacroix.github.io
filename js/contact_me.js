@@ -11,7 +11,7 @@ $(document).ready(function() {
               .append('</div>');
 
           //clear all fields
-          $('#contactForm').trigger("reset");
+          //$('#contactForm').trigger("reset");
       }
     });
 });

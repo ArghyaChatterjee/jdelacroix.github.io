@@ -577,3 +577,7 @@ button.btn-success[disabled]:hover {
   border-color: #e74c3c;
   background: transparent;
 }
+
+.alert-success {
+  background: #{{ site.color.tertiary }};
+}
