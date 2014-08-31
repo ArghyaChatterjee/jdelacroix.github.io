@@ -1,4 +1,8 @@
-$(function() {
+$(document).ready(function() {
+    $('#contactForm').bootstrapValidator();
+});
+
+/*$(function() {
 
     $("input,textarea").not("[type=submit]").jqBootstrapValidation({
         preventSubmit: true,
@@ -39,6 +43,7 @@ $(function() {
     });
 });
 
+*/
 
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
