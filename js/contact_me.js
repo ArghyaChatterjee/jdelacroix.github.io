@@ -17,14 +17,16 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "http://forms.brace.io/ajpl.delacroix+website@gmail.com",
+                url: "https://api.mailgun.net/v2/jpdelacroix.com/messages",
                 type: "POST",
                 data: {
-                    name: name,
-                    email: email,
-                    message: message
+                    from: email,
+                    to: "noreply@jpdelacroix.com",
+                    subject: name,
+                    text: message
                 },
                 cache: false,
+                username: pubkey-35c3a133f213518283f395f04abb9a6e,
                 success: function() {
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
@@ -47,7 +49,7 @@ $(function() {
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
-                },
+                }
             })
         },
         filter: function() {
