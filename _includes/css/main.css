@@ -358,6 +358,7 @@ section.footer .btn-outline:hover {
     -moz-transition: top .3s ease,opacity .3s ease;
     -ms-transition: top .3s ease,opacity .3s ease;
     transition: top .3s ease,opacity .3s ease;
+    color: {{ site.color.secondary }};
 }
 
 .floating-label-form-group::not(:first-child) {
@@ -371,7 +372,7 @@ section.footer .btn-outline:hover {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #{{ site.color.primary }};
+    color: #{{ site.color.tertiary }};
 }
 
 form .row:first-child .floating-label-form-group {
@@ -559,4 +560,20 @@ code {
 
 .license p {
   font-size: 0.9em;
+}
+
+.has-success .form-control,
+.has-success .form-control:focus,
+.has-error .form-control,
+.has-error .form-control:focus {
+  border: 0px;
+}
+
+button.btn-success[disabled],
+button.btn-success[disabled]:active,
+button.btn-success[disabled]:focus,
+button.btn-success[disabled]:hover {
+  color: #e74c3c;
+  border-color: #e74c3c;
+  background: transparent;
 }
