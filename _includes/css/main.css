@@ -288,6 +288,8 @@ a.btn-outline:active {
     background: #{{ site.color.secondary }};
 }
 
+
+
 .btn-page {
     border: solid 2px #{{ site.color.secondary }};
     color: #{{ site.color.secondary }};
@@ -311,6 +313,10 @@ section.footer .btn-outline {
 section.footer .btn-outline:hover {
     background: #{{ site.color.secondary-dark }};
     color: #{{ site.color.secondary-light }};
+}
+
+footer a.btn-outline-footer {
+  font-size: 1.25em;
 }
 
 .btn-outline-footer:hover,
