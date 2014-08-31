@@ -1,7 +1,7 @@
 $(function() {
 
     $("input,textarea").not("[type=submit]").jqBootstrapValidation({
-        preventSubmit: true,
+        preventSubmit: false,
         submitError: function($form, event, errors) {
             // Fail message
             $('#success').html("<div class='alert alert-danger'>");
@@ -21,6 +21,9 @@ $(function() {
                 .append("<strong>Your message has been sent. </strong>");
             $('#success > .alert-success')
                 .append('</div>');
+
+            // logging
+            console.log(event.type);
 
             //clear all fields
             $('#contactForm').trigger("reset");
