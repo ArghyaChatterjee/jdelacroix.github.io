@@ -90,6 +90,17 @@ header {
     text-shadow: 1px 1px #{{ site.color.secondary }};
 }
 
+img.header {
+  width: 256px;
+  height: 256px;
+  border: 0px;
+  background: transparent url({{ "img/profile.png" | prepend: site.baseurl }});
+}
+
+img.header:hover {
+  background: transparent url({{ "img/profile2.png" | prepend: site.baseurl }});
+}
+
 @media(min-width: 768px) {
     header .container {
         padding-top: 200px;
