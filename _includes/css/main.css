@@ -598,3 +598,7 @@ button.btn-success[disabled]:hover {
 .alert-success {
   background: #{{ site.color.tertiary }};
 }
+
+div.honeypot {
+  display: none;
+}
