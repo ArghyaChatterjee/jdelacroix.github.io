@@ -602,3 +602,9 @@ button.btn-success[disabled]:hover {
 div.honeypot {
   display: none;
 }
+
+iframe {
+  width: 100%;
+  border: 0px;
+  display: none;
+}

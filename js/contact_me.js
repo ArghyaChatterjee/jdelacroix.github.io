@@ -9,9 +9,6 @@ $(document).ready(function() {
               .append("<strong>Your message has been sent. </strong>");
           $('#success > .alert-success')
               .append('</div>');
-
-          //clear all fields
-          //$('#contactForm').trigger("reset");
       }
     });
 });
@@ -65,7 +62,7 @@ function cancel_form() {
   $('#contactForm').trigger("reset");
   $('div.controls').toggleClass('floating-label-form-group-with-value', false);
   $('div.controls').toggleClass('floating-label-form-group', true);
-  toggle_visibility("contact", "off");
+  toggle_contact_visibility('off');
 }
 
 /*When clicking on Full hide fail/success boxes */
