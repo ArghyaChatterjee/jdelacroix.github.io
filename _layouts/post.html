@@ -19,10 +19,17 @@
                         <strong>{{ page.category }}
                         </strong>
                     </li>
+                    {% if page.category == 'Software' %}
+                    <li>Language:
+                        <strong>{{ page.language }}
+                        </strong>
+                    </li>
+                    {% else %}
                     <li>Date:
                         <strong>{{ page.project-date }}
                         </strong>
                     </li>
+                    {% endif %}
                     {% if page.repository != nil %}
                     <li>
                       Repository: <a href="https://github.com/{{ page.repository }}">{{ page.repository }}</a>
