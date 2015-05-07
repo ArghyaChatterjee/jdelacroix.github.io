@@ -63,7 +63,7 @@ Since the new [ROS](http://ros.org) release, [Indigo Igloo](http://wiki.ros.org/
 
 09. Use `pip` to install the ROS installation tools.
 
-        $ pip install -U catkin_pkg rosdep rosintall_generator wstool rosinstall
+        $ pip install -U catkin_pkg rosdep rosinstall_generator wstool rosinstall
 
 10. Choose a installation directory (prefix) for Indigo.
 
@@ -75,7 +75,7 @@ Since the new [ROS](http://ros.org) release, [Indigo Igloo](http://wiki.ros.org/
         $ mkdir ${ROS_INSTALL_PREFIX}/ros_catkin_ws
         $ cd ${ROS_INSTALL_PREFIX}/ros_catkin_ws
         $ rosinstall_generator desktop --rosdistro indigo --deps --wet-only > indigo-desktop-wet.rosinstall
-        $ wstool init -j8 src indigo-desktop-wet.install
+        $ wstool init -j8 src indigo-desktop-wet.rosinstall
 
 12. The next step in the standard installation document is to use `rosdep install --from-paths src --ignore-src --rosdistro indigo -y` to install all the system dependencies, but all dependencies have been installed in steps 3-9  ; therefore, this step can be skipped.
 
